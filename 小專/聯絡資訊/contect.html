@@ -138,7 +138,7 @@
                             <span class="cart-quantity cart-header cart-column">數量</span>
                         </div>
                         <div class="cart-items" id="mySnippet" onchange="banana()" onclick="banana()">
-    
+
                         </div>
                         <!-- <div class="cart-total" onchange="banana()" onclick="banana()">
                             <strong class="cart-total-title">總價</strong>
@@ -175,18 +175,22 @@
     <div class="container">
         <!-- 聯絡我們標題 -->
         <h2>聯絡我們</h2>
-        <div class="information">
-            <p class="information1"><img src="../img/商標.png" alt="">&thinsp;聯絡資訊</p>
-            <p class="information2">
-                客服信箱 &thinsp;&thinsp;&thinsp;|&emsp;aaaaaapley12@gmail.com
-                <br>
-                電&emsp;&emsp;話&emsp;|&emsp;0906-605-130
-                <br>
-                傳&emsp;&emsp;真&emsp;|&emsp;04-5894742
-                <br><br>
-                若您有任何需要我們服務的地方，歡迎填寫聯絡表單，<br>我們將盡快回覆，我們非常重視您的寶貴意見與建議，<br>謝謝。
-            </p>
+        <div style="display: flex; justify-content: center;margin-top: 4rem;margin-bottom: 4rem;">
+                <div style="display: flex; align-items: center;">
+                <img  src="../img/商標.png" alt="" style="height: 20px;margin-left: 8rem;">
+                <div style=" align-items: center;font-size: 2rem;">&thinsp;聯絡資訊</div>
+                </div>
+                <div style="margin-left: 15rem;">
+                    客服信箱 &thinsp;&thinsp;&thinsp;|&emsp;aaaaaapley12@gmail.com
+                    <br>
+                    電&emsp;&emsp;話&emsp;|&emsp;0906-605-130
+                    <br>
+                    傳&emsp;&emsp;真&emsp;|&emsp;04-5894742
+                    <br><br>
+                    若您有任何需要我們服務的地方，歡迎填寫聯絡表單，<br>我們將盡快回覆，我們非常重視您的寶貴意見與建議，<br>謝謝。
+                </div>
         </div>
+        <br>
 
 
 
@@ -259,7 +263,7 @@
             alert('感謝您的建議！');
         });
 
-         //接收localStorage的品項
+        //接收localStorage的品項
         const retrievedHtml = localStorage.getItem('myHtml');
         document.getElementById('mySnippet').innerHTML = retrievedHtml;
         //接收localStorage的計算結果
@@ -269,7 +273,7 @@
         function apple() {
             const myHtmlSnippet = document.getElementById('mySnippet').innerHTML;
             localStorage.setItem('myHtml', myHtmlSnippet)
-        }; 
+        };
         console.log(document.getElementById('mySnippet').innerHTML);
         //送出計算結果至localStorage
         function banana() {
